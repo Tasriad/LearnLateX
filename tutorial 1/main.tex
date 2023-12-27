@@ -1,0 +1,137 @@
+%preamble
+\documentclass[14pt]{article}
+\usepackage{multicol}
+\usepackage{multirow}
+%title portion
+\title{Introduction to Latex}
+\author{Tasriad Ahmed Tias}
+\date{\today}
+%title portion
+%preamble
+
+\begin{document}
+\maketitle %make title portion visible
+\tableofcontents %auto detect contents and generate
+\newpage
+This is a \LaTeX\ article.
+\section{Introduction}
+This is the introduction part of the document.\newline
+\textbf{This text will be in bold format.}\newline
+\textit{This text will be in italic format.}\newline
+\underline {This text will be underlined.}\newline
+{\Large Large text.}\newline
+{\Huge Huge text.}\newline
+\emph{This text is emphasized.}
+\section{Beginning}
+This is the beginning part of the document.
+\section{Main}
+\subsection{part1}
+part 1 of the document.
+\subsection{part2}
+part 2 of the document.
+\subsection{part3}
+\subsubsection{part of part3}
+this is the sub sub-section of part 3.
+\section*{unlisted section}
+This section will not show up in the table of contents. Nor will it be numbered.
+\newpage
+\section{List}
+In this section, we shall demonstrate the ordered and unordered list.
+\subsection{unordered list}
+\begin{itemize}
+    \item item1
+    \item item2
+    \begin{itemize}
+        \item nested item1
+        \item nested item2
+    \end{itemize}
+    \item item3
+\end{itemize}
+\subsection{ordered list}
+\begin{enumerate}
+    \item item1
+    \item item2
+    \item item3
+    \begin{enumerate}
+        \item nested item1
+        \item nested item2
+    \end{enumerate}
+\end{enumerate}
+\subsection{descriptive list}
+\begin{description}
+\item[description1:] about description 1
+\item[description2:] about description 2
+\end{description}
+\section{Table}
+We will see tables here.
+\subsection{Basic table}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{hcell1} & \textbf{hcell2} & \textbf{hcell3}\\
+\hline
+cell4 & cell5 & cell6\\
+\hline
+cell7 & cell8 & cell9\\
+\hline
+\end{tabular}
+\subsection{Multi-column table}
+\begin{tabular}{|c|c|c|}
+    \hline
+    cell1 & cell2 & cell3\\
+    \hline
+    1 & \multicolumn{2}{c|}{Merged}\\
+    \hline
+    2 & 3 & 4\\
+    \hline
+\end{tabular}
+\subsection{Multi-row table}
+\begin{tabular}{|c|c|c|}
+    \hline
+    cell1 & cell2 & cell3\\
+    \hline
+    \multirow{2}{*}{Merged} & cell4 & cell5\\
+    \cline{2-3}
+    & cell6 & cell7\\
+    \hline
+\end{tabular}
+\subsection{Multi-row and Multi-column table}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    1 & 2 & 3 & 4\\
+    \hline
+    \multirow{3}{*}{MergedR}
+    & \multicolumn{2}{c|}{\multirow{3}{*}{MergedC}} & 5\\
+    \cline{4-4}
+    & \multicolumn{2}{c|}{} & 6\\
+    \cline{4-4}
+    & \multicolumn{2}{c|}{} & 7\\
+    \hline
+\end{tabular}
+\section{Mathematical equation}
+\subsection{Direct approach}
+This is a simple equation $E = mc^2$\newline
+This is also a simple equation:\newline 
+$a_1x + b_1y = 2$\newline
+$a_2x + b_2y = 5$ \newline
+$E_{kintetic} = \frac{1}{2}mv^2$\newline
+$\sum_{i=0}^n a_i$ \newline
+\subsection{Mathematical environment}
+\begin{equation}
+    x = e^{\frac{a}{b^3}}
+\end{equation}
+
+\begin{equation}
+    \gamma = \frac{1-f}{f} 
+\end{equation}
+
+\begin{equation}
+    \epsilon = 8.854E-12
+\end{equation}
+
+\begin{equation}
+    A \cap B = C
+\end{equation}
+\begin{equation}
+    z= \left(\frac{\frac{x}{y}}{\frac{a}{b}}\right)
+\end{equation}
+\end{document}
